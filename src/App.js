@@ -29,7 +29,7 @@ const App = () => {
                     <ThemeProvider>
                         <Routes>
                             
-                            {/* <Route path='/login' element={<Login />} /> */}
+                            <Route path='/login' element={<Login />} />
                             <Route path='/' element={<LandingPage />} />
                             <Route path='/admindashboard' element={<AdminDashboard />} />
                             <Route path="/voiceAi" element={<ProtectedRoute element={VoiceAIComponent} />} />
