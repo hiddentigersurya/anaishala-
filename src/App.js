@@ -28,17 +28,17 @@ const App = () => {
                 <BrowserRouter>
                     <ThemeProvider>
                         <Routes>
-                             {/* <Route path='/login' element={<Login />} /> */}
                             
                             <Route path='/' element={<LandingPage />} />
-                            <Route path='/admindashboard' element={<AdminDashboard />} />
-                            <Route path="/voiceAi" element={<ProtectedRoute element={VoiceAIComponent} />} />
-                            <Route path="/chat" element={<ProtectedRoute element={Home} />} />
-                            <Route path='/dataset' element={<ProtectedRoute element={StorageComponent} />} />
-                            <Route path="/clientDataset" element={<ProtectedRoute element={ClientDataset} />} />
-                            <Route path="/clientprofile/:id" element={<ProtectedRoute element={ClientProfileView} />} />
-                            <Route path="/search" element={<ProtectedRoute element={Search} />} />
-                            <Route path="/profiles" element={<ProtectedRoute element={Profiles} />} />
+                              <Route exact path='/login' element={<Login />} /> 
+                            <Route  exact path='/admindashboard' element={<AdminDashboard />} />
+                            <Route exact path="/voiceAi" element={<ProtectedRoute element={VoiceAIComponent} />} />
+                            <Route exact path="/chat" element={<ProtectedRoute element={Home} />} />
+                            <Route exact path='/dataset' element={<ProtectedRoute element={StorageComponent} />} />
+                            <Route exact path="/clientDataset" element={<ProtectedRoute element={ClientDataset} />} />
+                            <Route exact path="/clientprofile/:id" element={<ProtectedRoute element={ClientProfileView} />} />
+                            <Route exact path="/search" element={<ProtectedRoute element={Search} />} />
+                            <Route exact path="/profiles" element={<ProtectedRoute element={Profiles} />} />
                         </Routes>
                     </ThemeProvider>
                 </BrowserRouter>
