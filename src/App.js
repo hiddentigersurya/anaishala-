@@ -18,7 +18,7 @@ import AdminDashboard from './components/AdminPage/AdminDashboard';
 
 const App = () => {
     useEffect(() => {
-        document.title = 'Legalee Ai';
+        document.title = 'Aishaala';
     }, []);
 
     return (
