@@ -28,7 +28,7 @@ const blogs = [
 function App() {
   return (
     <div id="blog">
-    <h1 className="blog-heading">Blogs</h1>
+    <h1 className="blog-heading">Happy Blogging with Aishaala</h1>
     <div className="blog-container">
       {blogs.map((blog, index) => (
         <a href={blog.link} key={index} className="blog-card" target="_blank" rel="noopener noreferrer">

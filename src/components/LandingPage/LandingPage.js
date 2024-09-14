@@ -126,10 +126,10 @@ const LandingPage = () => {
 
     // const videoRef=useRef();
     const footerItems = [
-        { header: " Aishaala ", subHeaders: [{ title: "About Us", path: "" }] },
+        { header: " Aishaala ", subHeaders: [{ title: "About Us", path: "/about" }] },
         { header: "Office", subHeaders: [{ title: "Head Office", path: "" }, { title: "Branch Office", path: "" },] },
         { header: "Quick Links", subHeaders: [{ title: "Blog", path: "/blog" },  { title: "Careers", path: "" }] },
-        { header: "Legal Stuff", subHeaders: [{ title: "Privacy Policy", path: "pdf/pp.pdf" }, { title: "Terms of Service", path: "/terms-conditions" }, { title: "Refunds", path: "/refunds" }, { title: "Disclaimer", path: "/disclaimer" },{ title: "Admin", path: "/admindashboard" },] },
+        { header: "Legal Stuff", subHeaders: [{ title: "Privacy Policy", path: "./pdf/pp.pdf" }, { title: "Terms of Service", path: "/terms-conditions" }, { title: "Refunds", path: "/refunds" }, { title: "Disclaimer", path: "/disclaimer" },{ title: "Admin", path: "/admindashboard" },] },
     ]
 
     const testimonials = [
@@ -351,7 +351,7 @@ const LandingPage = () => {
     return (
         <>
             <div className="landing-container" >
-            <ParticlesComponent id="particles" /> 
+            {/* <ParticlesComponent id="particles" />  */}
                 {<div className="navbar-landing">
                     <div className='navbar-left'>
                         <p id="legallehead" onClick={() => { navigate('/') }} className='legaliHead'>Aishaala</p>
@@ -432,7 +432,7 @@ const LandingPage = () => {
                                     <h3 className='headerFooter'>{data.header}</h3>
                                     <div className='footer-col-item'>
                                         {data.subHeaders.map((dat, inde) => (
-                                            <p onClick={() => { dat.title === "Admin" ? navigate(dat.path) : setAddress("") }}>{dat.title}</p>
+                                            <p onClick={() => { dat.title !== "" ? navigate(dat.path) : setAddress("") }}>{dat.title}</p>
                                         ))}
                                     </div>
                                 </div>

@@ -1,75 +1,53 @@
-/* Define CSS variables for light and dark themes */
-:root {
-    --background-color-light: #ffffff;
-    --background-color-dark: #121212;
-    --text-color-light: #000000;
-    --text-color-dark: #ffffff;
-    --card-background-color-light: #f0f0f0;
-    --card-background-color-dark: #1e1e1e;
-    --box-shadow-color: rgba(0, 0, 0, 0.2);
-}
-
-/* Apply the dark theme by default */
+/* App.css */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: var(--background-color-dark);
-    color: var(--text-color-dark);
-}
-
-/* Light theme support */
-@media (prefers-color-scheme: light) {
-    body {
-        background-color: var(--background-color-light);
-        color: var(--text-color-light);
-    }
-
-    .blog-card {
-        background-color: var(--card-background-color-light);
-        color: var(--text-color-light);
-    }
-}
-
-/* Blog container styling */
-.blog-container {
+    background-color: #121212; /* Matching the dark theme */
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 30px;
+    align-items: center;
+  }
+  
+  .blog-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 20px;
-    max-width: 1200px; /* Adjusted max-width to fit more content */
+    max-width: 1200px;
     margin: auto;
-}
-
-/* Blog card styling */
-.blog-card {
-    background-color: var(--card-background-color-dark);
+  }
+  
+  .blog-card {
+    background-color: #1e1e1e;
     border-radius: 8px;
     text-decoration: none;
-    color: var(--text-color-dark);
+    color: white;
     overflow: hidden;
     padding: 20px;
-    box-shadow: 0px 4px 8px var(--box-shadow-color);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
-}
-
-.blog-card:hover {
+  }
+  
+  .blog-card:hover {
     transform: scale(1.05);
-}
-
-/* Blog content styling */
-.blog-content {
+  }
+  
+  .blog-content {
     padding: 20px;
-}
-
-/* Heading styling */
-h2 {
+  }
+  
+  h2 {
     margin: 0;
     font-size: 1.5em;
-}
-
-/* Paragraph styling */
-p {
+  }
+  
+  p {
     margin-top: 10px;
     font-size: 1em;
     line-height: 1.6;
-}
+  }
+  
