@@ -46,7 +46,7 @@ const AdminDashboard = () => {
                 <div className='logocontainer'>
                     <img src="https://res.cloudinary.com/dcwxu3d5g/image/upload/v1719660210/chintu/Legai_1_c1olwj.png" className="adminlogo" />
 
-                    <h1 className='logotext'>Legalee Ai</h1>
+                    <h1 className='logotext'>Aishaala</h1>
 
                 </div>
 

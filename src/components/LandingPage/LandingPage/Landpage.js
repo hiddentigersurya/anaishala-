@@ -1,6 +1,7 @@
 // src/components/LandingPage.js
 
 import React, { useState } from 'react';
+// import { Link } from 'react-router-dom';
 import BoxComponent from '../boxComponent';
 import Logo from "../assets/image1.png"
 import Logo2 from '../assets/image2.png'
@@ -16,7 +17,7 @@ import { RotatingLines } from 'react-loader-spinner';
 import VideoBoxComponent from '../Videobox';
 
 import { GoogleLogin } from "@react-oauth/google";
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import toast from "react-hot-toast";
 import Cookies from 'js-cookie';
 
@@ -275,57 +276,58 @@ const LandingPage = () => {
 
 
       </div>
-      {/* <VideoBoxComponent content={content} /> */}
+      {/* /* <VideoBoxComponent content={content} /> */}
 
 
 
 
-      {/*<VideoBoxComponent content={content} />*/}
-      <BoxComponent content={content2} />
-      <BoxComponent content={content3} />
-      <BoxComponent content={content4} />
-      <BoxComponent content={content5} />
-      <BoxComponent content={content6} />
-      <footer className="footer-section">
-        <h1 className='heading-footer'> Aishaala <img className='tradmark' src={TradeMark} /> <br /> <span className='heading-span'>Powered by Mobishaala.com</span></h1>
+        {/* <VideoBoxComponent content={content} /> */}
+        <BoxComponent content={content2} />
+        <BoxComponent content={content3} />
+        <BoxComponent content={content4} />
+        <BoxComponent content={content5} />
+        <BoxComponent content={content6} />
+        <footer className="footer-section">
+          <h1 className='heading-footer'> Aishaala <img className='tradmark' src={TradeMark} /> <br /> <span className='heading-span'>Powered by Mobishaala.com</span></h1>
 
-        <div className="footer-container">
+          <div className="footer-container">
 
-          <div className="footer-column">
-            <h3>About Us</h3>
-            <ul>
-              <li><a href="#office">Office</a></li>
-              <li><a href="#head-office">Head Office</a></li>
-              <li><a href="#branch-office">Branch Office</a></li>
-            </ul>
+            <div className="footer-column">
+          <h3>About Us</h3>
+          <ul>
+            <li><a href="#office">Office</a></li>
+            <li><a href="#head-office">Head Office</a></li>
+            <li><a href="#branch-office">Branch Office</a></li>
+          </ul>
+            </div>
+
+            <div className="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#Blog">Blog</a></li>
+            
+            <li><a href="#careers">Careers</a></li>
+          </ul>
+            </div>
+
+            <div className="footer-column">
+          <h3>Legal Stuff</h3>
+          <ul>
+            <li><a href="#privacy-policy">Privacy Policy</a></li>
+            <li><a href="#terms-of-service">Terms of Service</a></li>
+            <li><a href="#refunds">Refunds</a></li>
+            <li><a href="#disclaimer.pdf" target="_blank">Disclaimer</a></li>
+            <li><a href="#admin">Admin</a></li>
+          </ul>
+            </div>
           </div>
 
-          <div className="footer-column">
-            <h3>Quick Links</h3>
-            <ul>
-              <li><a href="#blog">Blog</a></li>
-              <li><a href="#admin">Admin</a></li>
-              <li><a href="#careers">Careers</a></li>
-            </ul>
+          <div className="footer-bottom">
+            <p>&copy; 2024 Aishalaa. All Rights Reserved.</p>
           </div>
+        </footer>
 
-          <div className="footer-column">
-            <h3>Legal Stuff</h3>
-            <ul>
-              <li><a href="#privacy-policy">Privacy Policy</a></li>
-              <li><a href="#terms-of-service">Terms of Service</a></li>
-              <li><a href="#refunds">Refunds</a></li>
-              <li><a href="#disclaimer">Disclaimer</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="footer-bottom">
-          <p>&copy; 2024 Aishalaa. All Rights Reserved.</p>
-        </div>
-      </footer>
-
-      {/*popup demo video*/}
+        {/*popup demo video*/}
       {isPopupOpen && (
         <div className="popup-overlay">
           <div className="popup-content">

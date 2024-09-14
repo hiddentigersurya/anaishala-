@@ -13,7 +13,7 @@ const SignInForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); // Set loading to true when starting the login process
+    setLoading(true); 
     try {
       const response = await axios.post("https://legai.onrender.com/login", {
         username,

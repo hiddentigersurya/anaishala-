@@ -15,20 +15,21 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import LandingPage from "./components/LandingPage/LandingPage"
 import AdminDashboard from './components/AdminPage/AdminDashboard';
+import Blog from './components/Blog/Blog';
 
 const App = () => {
     useEffect(() => {
-        document.title = 'Legalee Ai';
+        document.title = 'Aishaala';
     }, []);
 
     return (
         <div className="App">
             <ParticlesComponent id="particles" />
-            <GoogleOAuthProvider clientId={`${process.env.REACT_APP_GOOGLE_CLIENTID}`}>
+            <GoogleOAuthProvider clientId="722452147364-o9b63kqli85r7l2tsndons0o3o6l8tg4.apps.googleusercontent.com">
                 <BrowserRouter>
                     <ThemeProvider>
                         <Routes>
-                            <Route path='/login' element={<Login />} />
+                            <Route exact path='/login' element={<Login />} /> 
                             <Route path='/' element={<LandingPage />} />
                             <Route path='/admindashboard' element={<AdminDashboard />} />
                             <Route path="/voiceAi" element={<ProtectedRoute element={VoiceAIComponent} />} />
@@ -38,6 +39,7 @@ const App = () => {
                             <Route path="/clientprofile/:id" element={<ProtectedRoute element={ClientProfileView} />} />
                             <Route path="/search" element={<ProtectedRoute element={Search} />} />
                             <Route path="/profiles" element={<ProtectedRoute element={Profiles} />} />
+                            <Route  path="/blog" element={<ProtectedRoute element={Blog} />} />
                         </Routes>
                     </ThemeProvider>
                 </BrowserRouter>

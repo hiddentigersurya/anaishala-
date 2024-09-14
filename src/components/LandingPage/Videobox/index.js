@@ -21,7 +21,7 @@ const VideoBoxComponent = ({ content }) => {
         <p className='Box-Paragraph'>{paragraph}</p>
         <div className="landing-buttons">
           <button className="start-button">{button}</button>
-          <button className="signin-button">Already have an Account? Sign in</button>
+          <button className="signin-button">Sign in to Aishaala</button>
         </div>
       </div>
 
