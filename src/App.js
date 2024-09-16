@@ -38,8 +38,8 @@ const App = () => {
                             <Route path="/clientprofile/:id" element={<ProtectedRoute element={ClientProfileView} />} />
                             <Route path="/search" element={<ProtectedRoute element={Search} />} />
                             <Route path="/profiles" element={<ProtectedRoute element={Profiles} />} />
-                            <Route  path="/blog" element={<ProtectedRoute element={Blog} />} />
-                            <Route  path="/about" element={<ProtectedRoute element={About} />} />
+                            <Route  path="/blog"  Component={Blog} />
+                            <Route  path="/about" Component={About} />
                         </Routes>
                     </ThemeProvider>
                 </BrowserRouter>
