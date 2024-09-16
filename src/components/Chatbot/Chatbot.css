@@ -6,12 +6,17 @@
   padding-right: 0px;
   display: flex;
   flex-direction: column;
-
   padding-bottom: 0px;
   justify-content: space-between;
   transition: ease 0.5s;
-
-
+}
+.custom-tool {
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  padding: 8px;
+  border-radius: 20px;
+  margin-left: 0px;
 }
 
 .light-mode .chat-area .chatbox1 {
@@ -32,7 +37,6 @@
 
 .chatbox {
   overflow-y: scroll;
-
   height: 80%;
   padding: 40px;
   padding-top: 36px;
@@ -206,9 +210,48 @@ h3 {
 .dark-mode .inputmsg {
   border: none;
 }
-
-
-
+.promptBtnContainer{
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.roboaiiconNav{
+  height: 35px;
+  width: 35px;
+}
+.chatbot-btn{
+  background-color: #6200ea;
+  color: white;
+  border: none;
+  margin-left: 10px;
+  margin-right: 25px;
+  height: 50px;
+  margin-bottom: 10px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.chatbot-btn:hover{
+  background-color: #4b4b4b;
+}
+.chatbot-btn:active{
+  background-color: #4b4b4b;
+}
+.chatbot-btn:focus{
+  background-color: #4b4b4b;
+}
+.chatbot-btn:disabled{
+  background-color: #4b4b4b;
+}
+.chatbot-btn:disabled:hover{
+  background-color: #4b4b4b;
+}
+.chatbot-btn:disabled:active{
+  margin-right: 20px;
+  cursor: pointer;
+  border-radius: 12px;
+}
 .prompsBtn {
   background-color: #6200ea;
   color: white;

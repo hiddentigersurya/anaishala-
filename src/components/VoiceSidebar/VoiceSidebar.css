@@ -1,0 +1,156 @@
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-right: solid 1px #c6c0c0;
+    transition: ease 0.5s;
+    padding-top: 10px; /* Adjusted padding to move the container up */
+    margin-top: 0px;
+}
+
+#sidebarchat {
+    height: 100%;
+}
+
+.activate-pro {
+    background-color: #000000;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.dark-mode .activate-pro {
+    background-color: #000000;
+    color: #f0f0f0;
+}
+
+.light-mode .activate-pro {
+    background-color: #000000;
+    color: white;
+}
+
+.LegAiLOGOName {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.pencilIcon {
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.pinned-chats,
+.history {
+    margin-top: 20px;
+}
+
+.pinned-chats .h3tag,
+.history .h3tag {
+    margin-bottom: 10px;
+}
+
+.sidebar {
+    padding: 20px;
+}
+
+.light-mode .sidebar {
+    background-color: #f0f0f0;
+    color: #000000;
+}
+
+.dark-mode .sidebar {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.new-chat {
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.linehor {
+    width: 100%;
+}
+
+.messageuserhistory {
+    font-family: Roboto;
+    font-size: 15px;
+    height: 140px; /* Slightly adjusted height */
+    border: solid 0.5px grey;
+    padding: 10px;
+    overflow-y: scroll;
+    border-radius: 5px;
+}
+
+.historyItem {
+    padding: 10px;
+    transition: linear 0.5s;
+    border-radius: 5px;
+}
+
+.historyItem:hover {
+    color: #fdfdfd;
+    background-color: #000000;
+}
+
+.messageuserhistory::-webkit-scrollbar {
+    display: none;
+}
+
+.messageuserhistory {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+@keyframes newChatAnimation {
+    0% {
+        background-color: #f0f0f0;
+        transform: scale(1);
+    }
+    50% {
+        background-color: #ffeb3b;
+        transform: scale(1.1);
+    }
+    100% {
+        background-color: #ffffff;
+        transform: scale(1);
+    }
+}
+
+.animate {
+    animation: newChatAnimation 0.5s ease-in-out;
+}
+
+@media (max-width: 700px) {
+    .sidebar.dark-mode {
+        background-color: transparent;
+        color: white;
+    }
+}
+
+#sidebarchat {
+    max-height: 94.5%;
+}
+
+.dark-mode .side-navigation-bar {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.dark-mode .linkele {
+    color: #ffffff;
+}

@@ -1238,7 +1238,7 @@
 
     .navbar-landing-mobile {
         display: flex;
-        margin-top: 24px;
+        
     }
 
     .super-inner-left {
@@ -1726,6 +1726,8 @@
         text-align: left;
     }
 
+    
+
 }
 
 .card-testimonal {
@@ -1798,28 +1800,58 @@
 
 .hero-section {
     text-align: center;
-    padding: 100px 20px;
+    padding: 60px 20px;
     background-color: #000;
     color: #fff;
 }
 
+@media (max-width: 768px) {
+    .hero-section {
+        margin-top: 0px !important;
+        padding: 0px 10px !important;
+        text-align: top;
+        background-color: #000;
+    }
+    .hero-section p {
+        font-size: 0.8rem !important;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        animation: fadeIn 2s ease-in-out;
+        
+    }
+    
+}
+
 .hero-section h1 {
     font-size: 3rem;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     animation: fadeIn 1.5s ease-in-out;
 }
 
 .hero-section p {
     font-size: 1.2rem;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     animation: fadeIn 2s ease-in-out;
+    
 }
 
 .microphone-wrapper {
     display: inline-block;
+    /* margin-top: 20px; */
     margin-bottom: 30px;
     animation: pulse 2s infinite;
+    
 }
+
+@media (max-width: 768px) {
+    .microphone-wrapper {
+        margin-top: 20px;
+        /* background-color: #08f; */
+        margin-bottom: 9px;
+    }
+}
+
+
 
 .microphone-icon {
     width: 80px;
@@ -1976,6 +2008,9 @@
     transition: background-color 0.3s ease;
     /* Smooth transition for hover effect */
 }
+.try-get-buttons{
+    margin-bottom:10px ;
+}
 
 .viewdemo-button:hover {
     background-color: #45a049;
@@ -2024,6 +2059,24 @@
     }
 }
 
+.address{
+    color: #fff;
+    font-size: 17px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+@media (max-width: 767px) {
+    .head {
+        font-size: 30px !important;
+        font-weight: 600 !important;
+        padding-top: 0px;
+        margin-top: 8px !important;
+        margin-bottom: 9px !important;
+        /* background-color: #08f; */
+    }
+}
+
 @media (max-width: 767px) {
     .responsive-iframe {
         width: 100%;
@@ -2032,6 +2085,7 @@
         /* Adjust height to maintain aspect ratio */
         display: none !important;
     }
+    
 
     .popup-overlay {
         width: 100%;

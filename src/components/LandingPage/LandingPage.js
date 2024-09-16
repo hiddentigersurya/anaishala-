@@ -127,10 +127,11 @@ const LandingPage = () => {
     // const videoRef=useRef();
     const footerItems = [
         { header: " Aishaala ", subHeaders: [{ title: "About Us", path: "/about" }] },
-        { header: "Office", subHeaders: [{ title: "Head Office", path: "" }, { title: "Branch Office", path: "" },] },
+        { header: "Office", subHeaders: [{ title: "Head Office", path: "",matter:"804, 5th Cross, 4th Block<br/>Koramangala, Bengaluru-560095<br/>contact@aishaala.com"}, { title: "Branch Office", path: "",matter:"293 , Saidulajab , Western Marg , New Delhi - 110030" },] },
         { header: "Quick Links", subHeaders: [{ title: "Blog", path: "/blog" },  { title: "Careers", path: "" }] },
-        { header: "Legal Stuff", subHeaders: [{ title: "Privacy Policy", path: "./pdf/pp.pdf" }, { title: "Terms of Service", path: "/terms-conditions" }, { title: "Refunds", path: "/refunds" }, { title: "Disclaimer", path: "/disclaimer" },{ title: "Admin", path: "/admindashboard" },] },
+        ,
     ]
+    const footerItems2 = [{ header: "Legal Stuff", subHeaders: [{ title: "Privacy Policy", path: "https://publuu.com/flip-book/655483/1461378" }, { title: "Terms of Service", path: "https://publuu.com/flip-book/655483/1461370" }, { title: "Refunds", path: "https://publuu.com/flip-book/655483/1461369" }, { title: "Disclaimer", path: "https://publuu.com/flip-book/655483/1461358" },{ title: "Admin", path: "/admindashboard" },] }]
 
     const testimonials = [
         {
@@ -358,7 +359,7 @@ const LandingPage = () => {
                         <p onClick={() => { navigate('/') }}>About</p>
                         <p>Students</p>
                         <p>Teachers</p>
-                        <p onClick={() => { setIsPlaying(p => !p) }}>Business</p>
+                        <p onClick={() => { setIsPlaying(p => !p) }}>Institution</p>
                     </div>
                     <div id="navbarright" className='navbar-right'>
                         <p className='help'>Help</p>
@@ -377,12 +378,12 @@ const LandingPage = () => {
                 </div>
 
                 <div className="hero-section">
-                    <h1>AI Assistant for Teachers and Students</h1>
+                    <h1 className='head'>Personalized AI for Teachers & Students</h1>
                     <p>
-                        experience the future of education with Aishaala Conversational AI,<br />a personalized assistant designed to enhance learning for teachers and Students  </p>
+                        Experience the future of education with Aishaala Conversational AI,<br />a personalized assistant designed to enhance learning for teachers and Students  </p>
                     <div className="microphone-wrapper">
                     <div className="mic-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <Lottie animationData={Mic} style={{ height: 150, width: 150 }} />
+                        <Lottie animationData={Mic} style={{ height: 110, width: 110 }} />
                             
                             </div>
                         <p>Click to Talk</p>
@@ -432,13 +433,29 @@ const LandingPage = () => {
                                     <h3 className='headerFooter'>{data.header}</h3>
                                     <div className='footer-col-item'>
                                         {data.subHeaders.map((dat, inde) => (
-                                            <p onClick={() => { dat.title !== "" ? navigate(dat.path) : setAddress("") }}>{dat.title}</p>
+                                            <div key={inde} className='address'>
+                                                <p onClick={() => { dat.title !== "" ? navigate(dat.path) : setAddress("") }}>{dat.title}</p>
+                                                {dat.matter !== "" && <p dangerouslySetInnerHTML={{ __html: dat.matter }}></p>}
+                                            </div>
                                         ))}
                                     </div>
                                 </div>
                             ))
 
                         }
+                         {footerItems2.length > 0 &&
+                                                                        footerItems2.map((data, index) => (
+                                                                            <div className='footer-col'>
+                                                                                <h3 className='headerFooter'>{data.header}</h3>
+                                                                                <div className='footer-col-item'>
+                                                                                    {data.subHeaders.map((dat, inde) => (
+                                                                                        <p onClick={() => window.open(dat.path, '_blank')}>{dat.title}</p>
+                                                                                    ))}
+                                                                                </div>
+                                                                            </div>
+                                                                        ))
+
+                                                                    }
                     </div>
                     <hr className='footer-line' />
                     <div className='footer-bottom'>
